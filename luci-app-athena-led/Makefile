@@ -18,7 +18,7 @@ define Package/$(PKG_NAME)
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
   TITLE:=LuCI Support for JDCloud AX6600 LED Screen Control
-  DEPENDS:=+lua +luci-base +luci-compat +luci-lua-runtime @(aarch64||arm)
+  DEPENDS:=+lua +luci-base +luci-compat +luci-lua-runtime +zoneinfo-core +zoneinfo-asia @(aarch64||arm)
   PKGARCH:=all
 endef
 
