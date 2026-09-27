@@ -185,3 +185,19 @@ msgstr "WCSS-PHYA0"
 #: luci-app-athena-led/htdocs/luci-static/resources/view/athena_led.js:139
 msgid "WCSS-PHYA1"
 msgstr "WCSS-PHYA1"
+
+#: luci-app-athena-led/htdocs/luci-static/resources/view/athena_led.js:118
+msgid "Network Upload Speed"
+msgstr "网络上传速度"
+
+#: luci-app-athena-led/htdocs/luci-static/resources/view/athena_led.js:119
+msgid "Network Download Speed"
+msgstr "网络下载速度"
+
+#: luci-app-athena-led/htdocs/luci-static/resources/view/athena_led.js:134
+msgid "Network Interface"
+msgstr "网络接口"
+
+#: luci-app-athena-led/htdocs/luci-static/resources/view/athena_led.js:135
+msgid "Set the network interface used by 'Network Upload Speed' and 'Network Download Speed' modes (e.g. br-lan, wan, pppoe-wan)"
+msgstr "设置 '网络上传速度' 和 '网络下载速度' 模式使用的网卡接口（例如 br-lan、wan、pppoe-wan）"

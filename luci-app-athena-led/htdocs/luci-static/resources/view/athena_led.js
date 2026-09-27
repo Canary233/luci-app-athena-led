@@ -115,6 +115,8 @@ return view.extend({
 		o.value('temp', _('Device Temperature'));
 		o.value('string', _('Custom Text'));
 		o.value('getByUrl', _('Remote Text'));
+		o.value('netUp', _('Network Upload Speed'));
+		o.value('netDown', _('Network Download Speed'));
 
 		o = s.option(form.Value, 'CustomText', _('Custom Text'),
 			_('Set the content displayed in \'Custom Text\' mode (allowed characters: [a~z], [0~9], [+-*/=.:：℃] )')
@@ -128,6 +130,12 @@ return view.extend({
 		o.default = 'https://ifconfig.me';
 		o.rmempty = false;
 		o.placeholder = _('Enter your api url here');
+
+		o = s.option(form.Value, 'NetworkInterface', _('Network Interface'),
+			_('Set the network interface used by \'Network Upload Speed\' and \'Network Download Speed\' modes (e.g. br-lan, wan, pppoe-wan)'));
+		o.default = 'br-lan';
+		o.rmempty = false;
+		o.placeholder = 'br-lan';
 
 		o = s.option(form.MultiValue, 'TemperatureSensor', _('Temperature Sensor'),
 			_('Select the sensor displayed in the \'Device Temperature\' mode'));

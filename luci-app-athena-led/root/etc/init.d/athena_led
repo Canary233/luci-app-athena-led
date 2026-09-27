@@ -25,7 +25,7 @@ start_service() {
 
     check_binary || return 1
 
-    local status seconds lightLevel option value url tempFlag
+    local status seconds lightLevel option value url tempFlag iface
     config_get status "$cfg" 'SideStatusIndicator' ''
     config_get seconds "$cfg" 'IntervalTime' '5'
     config_get lightLevel "$cfg" 'LightLevel' '5'
@@ -33,6 +33,7 @@ start_service() {
     config_get value "$cfg" 'CustomText' 'abcdefghijklmnopqrstuvwxyz0123456789+-*/=.:：℃'
     config_get url "$cfg" 'RemoteText' 'https://ifconfig.me'
     config_get tempFlag "$cfg" 'TemperatureSensor' '4'
+    config_get iface "$cfg" 'NetworkInterface' 'br-lan'
 
     procd_open_instance
     procd_set_param command "$PROG" \
@@ -42,7 +43,8 @@ start_service() {
         --option "${option}" \
         --value "${value}" \
         --url "${url}" \
-        --temp-flag "${tempFlag}"
+        --temp-flag "${tempFlag}" \
+        --interface "${iface}"
     procd_set_param respawn
     procd_set_param stderr 1
     procd_close_instance
